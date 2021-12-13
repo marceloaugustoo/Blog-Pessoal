@@ -9,9 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity
 @Table(name = "tb_tema")
@@ -21,7 +22,7 @@ public class Tema {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
+	@NotBlank(message = "O atributo descricao nao pode estar vazio.")
 	private String descricao;
 	
 	@OneToMany(mappedBy = "tema",cascade = CascadeType.ALL)

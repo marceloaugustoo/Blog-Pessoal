@@ -67,7 +67,7 @@ public class PostagemController {
 	
 	//metodo utilizado para deletar posts
 	@DeleteMapping("/{id}")
-	public void delete(@Valid @PathVariable long id) {
+	public void delete( @PathVariable long id) {
 		repository.deleteById(id);
 	}
 	
