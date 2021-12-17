@@ -75,7 +75,7 @@ public class UsuarioControllerTests {
 			"Juliana Andrews", "juliana_andrews@email.com.br", "juliana123"));
 
 		Usuario usuarioUpdate = new Usuario(usuarioCreate.get().getId(), 
-			"Juliana Andrews Ramos", "juliana_ramos@email.com.br", "juliana123");
+			"Juliana Andrews Ramos", "juliana_andrews@email.com.br", "juliana123");
 		
 		HttpEntity<Usuario> requisicao = new HttpEntity<Usuario>(usuarioUpdate);
 
